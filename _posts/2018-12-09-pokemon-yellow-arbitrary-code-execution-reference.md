@@ -3,6 +3,10 @@ category: gaming
 tags: pokemon glitches
 ---
 
+**Update**: I corrected an error in the last item setup to change it from 199 pokeballs to **119** pokeballs, which was an oversight on my part. using 199 instead could damage your save file. Thanks to [@Shinuto](https://twitter.com/shinuto) for informing me. Please beware that this guide may have other inaccuracies, I haven't used it in a long time so I can't verify!
+
+---
+
 I played the first and second generations of Pokemon a ton back in the late nineties, and I've recently gotten back into it over the past couple years with Pokemon Go, Pokemon Moon/Ultra Sun, and Pokemon Let's Go (which is amazing!). Nintendo sells the original gameboy games via their virtual console on the 3ds, and I replayed Pokemon Yellow as well on that earlier this year, and I hope to make time to play Pokemon Crystal soon as well (since I never finished the second generation games when I played in high school).
 
 There's a ton of fun glitches you can pull off in Pokemon Yellow to basically do anything you want in the game via arbitrary code execution (like obtain any pokemon, alter any pokemon's stats, among other things). I'm very interested in using these to get pokemon with perfect stats or to get shiny pokemon into the latest games. However, these glitches require you to do things like have certain quantities of certain items in your inventory in a certain order (since those items can represent z80 assembly instructions that you can then execute). Remembering all the different item codes for the glitches I want to execute is hard, and there's no single comprehensive reference for all of the ones I want that I've found, so I'm going to aggregate and document them here.
@@ -104,11 +108,11 @@ This will let you make a pokemon "perfect" by ensuring its individual stat adjus
 Put the pokemon you want to edit first in your party, then execute this code:
 
 1. `ws# #m#`
-2. Any item (you may also have `ws# #m#` be in slot 2)
+2. Any item (you may also have `ws# #m#` be in slot 2 and any item be in slot 1)
 3. `Lemonade x255`, or `Lemonade x170`
 4. `X Accuracy x 134`
 5. `Carbos x209`
-6. `Poke Ball x199`
+6. `Poke Ball x119`
 7. `Fresh Water x201`
 
 255 Lemonade will set your pokemon's DVs all to 15 (the highest possible, for a perfect stats pokemon), while 170 Lemonade will set it's DVs all to 10 to make it shiny when you transfer. It's possible for your pokemon to have 15 DV in attack with 10 everywhere else and still be shiny, but this code doesn't do that. Other more complicated codes might be able to modify attack to make it perfect but I'm not familiar with them.
