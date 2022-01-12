@@ -3,7 +3,7 @@ category: gaming
 tags: pokemon glitches
 ---
 
-**Update**: I corrected an error in the last item setup to change it from 199 pokeballs to **119** pokeballs, which was an oversight on my part. Using 199 instead could damage your save file. Thanks to [@Shinuto](https://twitter.com/shinuto) for informing me. Please beware that this guide may have other inaccuracies, I haven't used it in a long time so I can't verify!
+**Update**: I corrected an error in the last item setup to change it from 199 pokeballs to **119** pokeballs, which was an oversight on my part. Using 199 instead could damage your save file. Thanks to shinuto on twitter for informing me. Please beware that this guide may have other inaccuracies, I haven't used it in a long time so I can't verify!
 
 ---
 
