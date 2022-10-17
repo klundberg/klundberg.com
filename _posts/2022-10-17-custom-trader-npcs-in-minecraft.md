@@ -74,10 +74,13 @@ Now we get to the most complex parts of the commands we'll be running. Place two
 
 Next, right click the first chain block in the line, that the orange one is pointing to. Change its "Condition" value to `Conditional`, which makes it run if the prior command block's command succeeded. Change it's "Redstone" value to `Always Active` so that it doesn't need to be powered to run its command.
 
-Then, type this command (with possible edits I'll explain):
+Then, type this command (as one line, broken up on multiple lines here for readability) into the command block's box:
 
 ```minecraft
-/clear @p[r=2,x=30,y=4,z=35,hasitem={item=emerald,quantity=3..}] emerald 0 3
+/clear
+  @p[r=2,x=30,y=4,z=35,
+     hasitem={item=emerald,quantity=3..}]
+  emerald 0 3
 ```
 
 It should look roughly like this (if you need to see the entire command, click the `+` button):
