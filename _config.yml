@@ -6,70 +6,70 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en"
-title                    : "klundberg.com"
-title_separator          : "-"
-name                     : "Kevin Lundberg"
-description              : "My personal blog."
-url                      : https://www.klundberg.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : klundberg/klundberg.com # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+locale: "en"
+title: "klundberg.com"
+title_separator: "-"
+name: "Kevin Lundberg"
+description: "My personal blog."
+url: https://www.klundberg.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl: # the subpath of your site, e.g. "/blog"
+repository: klundberg/klundberg.com # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
-theme                    : minimal-mistakes-jekyll
-minimal_mistakes_skin    : default
-words_per_minute         : 200
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: dark #  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
+words_per_minute: 200
 comments:
-  provider               : false # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider: false # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    appid:
+    num_posts: # 5 (default)
+    colorscheme: # "light" (default), "dark"
 staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
+  allowedFields: ["name", "email", "url", "message"]
   # branch                 : "master"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}" # "/_data/comments/{options.slug}" (default)
-  requiredFields         : ['name', 'message']
+  commitMessage: "New comment."
+  filename: comment-{@timestamp}
+  format: "yml"
+  moderation: true
+  path: "_data/comments/{options.slug}" # "/_data/comments/{options.slug}" (default)
+  requiredFields: ["name", "message"]
   transforms:
-    email                : "md5"
+    email: "md5"
   generatedFields:
     date:
-      type               : "date"
+      type: "date"
       options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format: "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path: # blank (default) uses feed.xml
 json_feed:
-  path                   : # blank (default) uses feed.json
+  path: # blank (default) uses feed.json
 
 # SEO Related
-google_site_verification : dm22KL26h3zCTvGyJcB3A0iQ26RnQ_VoErd22Usa94E
-bing_site_verification   : DD03480E534E01CB8767C5D9E73FD4DC
-alexa_site_verification  :
-yandex_site_verification :
+google_site_verification: dm22KL26h3zCTvGyJcB3A0iQ26RnQ_VoErd22Usa94E
+bing_site_verification: DD03480E534E01CB8767C5D9E73FD4DC
+alexa_site_verification:
+yandex_site_verification:
 
 # Social Sharing
 twitter:
-  username               : kevlario
+  username: kevlario
 facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 : # Open Graph/Twitter default site image
+  username:
+  app_id:
+  publisher:
+og_image: # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type: # Person or Organization (defaults to Person)
+  name: # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
 # Analytics
@@ -78,39 +78,37 @@ social:
 #   google:
 #     tracking_id          : UA-61806406-1
 
-
 # Site Author
 author:
-  name             : "Kevin Lundberg"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I'm a software developer, with a breadth of experience in multiple technologies; mainly iOS (Swift + Objective-c) but also Android, Node.js/Javascript, and others!"
-  location         : "MA, US"
-  email            : kevin@klundberg.com
-  encoded_email    : "&#107;&#101;&#118;&#105;&#110;&#064;&#107;&#108;&#117;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#099;&#111;&#109;"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : klundberg
-  google_plus      :
-  keybase          : kevlario
-  instagram        :
-  lastfm           :
-  linkedin         : kevinlundberg
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : 19252/kevlar # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
-  steam            : therealkevlar
-  tumblr           :
-  twitter          : kevlario
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-
+  name: "Kevin Lundberg"
+  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio: "I'm a software developer, with a breadth of experience in multiple technologies; mainly iOS (Swift + Objective-c) but also Android, Node.js/Javascript, and others!"
+  location: "MA, US"
+  email: kevin@klundberg.com
+  encoded_email: "&#107;&#101;&#118;&#105;&#110;&#064;&#107;&#108;&#117;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#099;&#111;&#109;"
+  uri:
+  bitbucket:
+  codepen:
+  dribbble:
+  flickr:
+  facebook:
+  foursquare:
+  github: klundberg
+  google_plus:
+  keybase: kevlario
+  instagram:
+  lastfm:
+  linkedin: kevinlundberg
+  pinterest:
+  soundcloud:
+  stackoverflow: 19252/kevlar # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  steam: therealkevlar
+  tumblr:
+  twitter: kevlario
+  vine:
+  weibo:
+  xing:
+  youtube:
 
 # Reading Files
 include:
@@ -149,14 +147,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
 
 # Markdown Processing
 kramdown:
@@ -169,12 +165,10 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
 
 # Outputting
 # permalink: /:categories/:title/
@@ -182,7 +176,6 @@ permalink: /blog/:title/
 paginate: 8 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
 
 # Plugins
 plugins:
@@ -199,7 +192,6 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-
 
 # Archives
 #  Type
@@ -229,14 +221,12 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-
 # HTML Compression
 # - http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
     envs: development
-
 
 # Defaults
 defaults:
