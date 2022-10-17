@@ -116,4 +116,4 @@ That's all there is to it; All you need to do now is test to make sure it works!
 
 If you want to add more items that may cost different amounts or kinds of items as payment, you'll need to add a new row of command blocks in a similar configuration, and have the NPC's dialog button create a redstone block behind it.
 
-If you want more complex costs for items (like, 3 emeralds and a diamond for a diamond sword), you can add more chain command blocks before the final one that runs `/give` to test for and clear the right amount of items, just make sure you have enough room to hold them all in a line.
+If you want more complex costs for items (like, 3 emeralds and a diamond for a diamond sword), you can add more chain command blocks before the final one that runs `/give` to test for and clear the right amount of items, just make sure you have enough room in your build to have all the blocks you need in a single line.
