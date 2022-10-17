@@ -107,7 +107,7 @@ Enter the following command in this command block:
 /give @p[r=2,x=30,y=4,z=35] diamond_sword 1
 ```
 
-This command is much simpler, as we only need to specify the location and radius to search for the player in the `@p` selector. Change the coordinates and radius to be the same as what you entered in the prior command block.
+This command is much simpler, as we only need to specify the location and radius to search for the player in the `@p` selector. Change the coordinates and radius to be the same as what you entered in the prior command block to what you need for your own world.
 
 Remember that this block will only execute if the prior one succeeded, meaning it will only grant the player a swird if they had the necessary amount of money.
 
