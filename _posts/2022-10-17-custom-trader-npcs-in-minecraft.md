@@ -5,7 +5,7 @@ tags: minecraft
 date: 2022-10-17 01:00:00 -04:00
 ---
 
-My spouse wanted me to write down what I learned for creating custom shop NPCs in Minecraft so she could learn how as well, so I thought I'd do a blog post so that I could add screenshots and such. My kid wanted to make a custom minecraft map where you could trade items with NPCs to get equipment, and after finding a couple videos on the topic and browsing the Minecraft wiki, this is what I've come up with.
+My spouse wanted me to write down what I learned for creating custom shop NPCs in Minecraft so she could learn how as well, so I thought I'd do a blog post so that I could add screenshots and such. My kid wanted to make a custom minecraft map where you could trade items with NPCs to get equipment, and after finding a [couple](https://www.youtube.com/watch?v=9RbR5QUJRyA) [videos](https://www.youtube.com/watch?v=fnHBkfzEVIw) on the topic and browsing the [Minecraft wiki](https://minecraft.fandom.com/wiki/Commands), this is what I've come up with.
 
 Note that all of these instructions are for use with Minecraft Bedrock Edition. Java edition may have slightly different ways to create the commands to do this.
 
@@ -49,6 +49,7 @@ Right click the command block, and enter the following command into the "command
 ```minecraft
 /setblock 33 4 35 air
 ```
+
 ![](/assets/images/2022-10-17/screenshot-3.png)
 
 Now, go back to your NPC, and right click. Click on `Advanced Settings`. This is where you'll create buttons in the dialog box to let players choose to buy something.
@@ -58,6 +59,7 @@ If all you see is `Add Command`, click that to create the command that will run 
 ```minecraft
 /setblock 33 4 35 redstone_block
 ```
+
 (changing 33 4 and 35 to the x, y, and z coordinates that are behind your command block.)
 
 ![](/assets/images/2022-10-17/screenshot-4.png)
@@ -73,6 +75,7 @@ Now we get to the most complex parts of the commands we'll be running. Place two
 Next, right click the first chain block in the line, that the orange one is pointing to. Change its "Condition" value to `Conditional`, which makes it run if the prior command block's command succeeded. Change it's "Redstone" value to `Always Active` so that it doesn't need to be powered to run its command.
 
 Then, type this command (with possible edits I'll explain):
+
 ```minecraft
 /clear @p[r=2,x=30,y=4,z=35,hasitem={item=emerald,quantity=3..}] emerald 0 3
 ```
@@ -82,11 +85,11 @@ It should look roughly like this (if you need to see the entire command, click t
 
 This command looks complex, so i'll explain. You'll need to change it slightly for your specific case:
 
-* `/clear` will clear items from the target's inventory. `emerald 0 3` will remove specifically only emeralds, and 3 is the amount removed. The `0` specifies any item variants (like wool color), but is 0 for items that don't have variants.
-* `@p[...]` lets you choose the nearest player to whatever is running the command. We pass some arguments in the `[]` to better control who we're looking for.
-   * `x`, `y`, and `z` specify where to start searching for the nearest player. My example places the player where I expect they'll be standing when talking to the npc, **Change this to the coordinates you need.**
-   * `r` specifies the search radius from the given coordinates, in blocks, if you want to add some margin for error. **Optionally change this if you need or want to.**
-   * `hasitem={item=emerald,quantity=3..}` finds the nearest player with an item we specify. `item=emerald` means we're looking for players with emeralds in their inventory. `quantity=3..` specifies they need at least 3 emeralds (signified with the `..` after the number). Without the `..`, you could only trade if you had exactly 3 emeralds.
+- `/clear` will clear items from the target's inventory. `emerald 0 3` will remove specifically only emeralds, and 3 is the amount removed. The `0` specifies any item variants (like wool color), but is 0 for items that don't have variants.
+- `@p[...]` lets you choose the nearest player to whatever is running the command. We pass some arguments in the `[]` to better control who we're looking for.
+  - `x`, `y`, and `z` specify where to start searching for the nearest player. My example places the player where I expect they'll be standing when talking to the npc, **Change this to the coordinates you need.**
+  - `r` specifies the search radius from the given coordinates, in blocks, if you want to add some margin for error. **Optionally change this if you need or want to.**
+  - `hasitem={item=emerald,quantity=3..}` finds the nearest player with an item we specify. `item=emerald` means we're looking for players with emeralds in their inventory. `quantity=3..` specifies they need at least 3 emeralds (signified with the `..` after the number). Without the `..`, you could only trade if you had exactly 3 emeralds.
 
 Thanks to the `hasitem` filter, if the player has the needed amount of emeralds, the command will remove them from their inventory and trigger the next chain command block. If they don't have the needed amount, nothing will happen!
 
@@ -95,6 +98,7 @@ Thanks to the `hasitem` filter, if the player has the needed amount of emeralds,
 Now, right click the final chain command block. Configure it like the first, with `Conditional` condition, and `Always Active` Redstone options.
 
 Enter the following command in this command block:
+
 ```minecraft
 /give @p[r=2,x=30,y=4,z=35] diamond_sword 1
 ```
