@@ -59,7 +59,7 @@ yandex_site_verification:
 
 # Social Sharing
 twitter:
-  username: kevlario
+  username:
 facebook:
   username:
   app_id:
@@ -95,16 +95,16 @@ author:
   foursquare:
   github: klundberg
   google_plus:
-  keybase: kevlario
+  keybase:
   instagram:
   lastfm:
   linkedin: kevinlundberg
   pinterest:
   soundcloud:
   stackoverflow: 19252/kevlar # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
-  steam: therealkevlar
+  steam:
   tumblr:
-  twitter: kevlario
+  twitter:
   vine:
   weibo:
   xing:
